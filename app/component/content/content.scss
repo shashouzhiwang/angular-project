@@ -1,0 +1,81 @@
+@import "../../lib/sass-css/transition";
+$color_cover: #000;
+$color_theme: #f1f1f1;
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, time, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, form, fieldset, label, legend, input, output, button, select, textarea, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-origin: padding-box;
+  -moz-background-origin: padding;
+  background-origin: padding-box;
+}
+
+html, body, p, h1, h2, h3, h4, h5, img {
+  padding: 0;
+  margin: 0;
+}
+
+.img_index {
+  position: absolute;
+  z-index: 10001;
+  color: #fff;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+}
+
+
+.slide {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: -100%;
+}
+
+.commentary.active{
+  position: absolute;
+  z-index: 10001;
+  color: #fff;
+  width: 100%;
+  background: $color_cover;
+  @include opacity(0.5);
+  height: auto;
+}
+
+.commentary{
+  left: -100%;
+  cursor: pointer;
+  @include transition-property(left, height);
+  @include transition-duration(333ms);
+  @include transition-timing-function(cubic-bezier(0.1, 0.7, 0.7, 1));
+  @include transform(translate3d(0, 0, 0));
+}
+
+.slides_warp .slide.active {
+  left: 0;
+  z-index: 10000;
+  height: auto;
+}
+
+.slides_warp {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  background: $color_cover;
+  z-index: 10000;
+  .slide {
+    left: -100%;
+    z-index: 1;
+    cursor: pointer;
+    @include transition-property(left, height);
+    @include transition-duration(333ms);
+    @include transition-timing-function(cubic-bezier(0.1, 0.7, 0.7, 1));
+    @include transform(translate3d(0, 0, 0));
+  }
+}
+
+

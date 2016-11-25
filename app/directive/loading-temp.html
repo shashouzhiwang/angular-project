@@ -1,0 +1,31 @@
+<style type="text/css">
+	.loading_cover,.loading_success,.loading_fail{position: absolute;height:100%;width:100%;z-index: 1000;background-size: 2.5em;top:0;overflow: hidden;}
+	.loading_content{background: rgba(0,0,0,0.5);    width: 7.5em;height: auto;text-align: center;    border-radius: .5em;padding: .8em; margin: auto;position: absolute;top: 0;left: 0;bottom: 0;right: 0;height: 4.5em;}
+	.loadding_icon{display:inline-block;font-size: 1.5em;color:#fff;background-size: 100%;-webkit-animation: loadding 1s steps(12, end) infinite; animation: loadding 1s steps(12, end) infinite;}
+	.loadding_success,.loadding_fail{
+		font-size: 2em;color:#fff;
+	}
+	.loadding_text{color:#fff;}
+	@keyframes loadding { 0% { -webkit-transform: rotate3d(0, 0, 1, 0deg); } 100% { -webkit-transform: rotate3d(0, 0, 1, 360deg); } }
+	@-webkit-keyframes loadding { 0% { -webkit-transform: rotate3d(0, 0, 1, 0deg); } 100% { -webkit-transform: rotate3d(0, 0, 1, 360deg); } }
+</style>
+<div class="loading_cover"style="display:none;">
+    <div class="loading_content">
+        <div class="loadding_icon"><i class="iconfont icon-loading"></i></div>
+        <div class="loadding_text" ng-bind="tipText"></div>
+    </div>
+</div>
+
+<div class="loading_success"style="display:none;">
+    <div class="loading_content">
+        <div class="loadding_success"><i class="iconfont icon-success"></i></div>
+        <div class="loadding_text">加载成功</div>
+    </div>
+</div>
+
+<div class="loading_fail"style="display:none;">
+    <div class="loading_content">
+        <div class="loadding_fail"><i class="iconfont icon-fail"></i></div>
+        <div class="loadding_text">加载成功</div>
+    </div>
+</div>

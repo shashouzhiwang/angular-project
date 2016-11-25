@@ -1,0 +1,13 @@
+{
+ "unused": true,
+ "undef":true,
+ "eqeqeq":true,
+ "funcscope":true,
+  "node": true,
+  "globals": {
+        "$": false,
+        "jQuery": false,
+        "angular":false
+    }
+}
+  
