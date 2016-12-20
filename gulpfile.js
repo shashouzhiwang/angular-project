@@ -155,12 +155,12 @@ gulp.task('devserver', function () {
       livereload: {
         clientConsole: true
       },
-      proxy: {
-        enable: true,
-        host: 'http://w3cboy.com',
-        urls: /^\/api\//
-      },
-      defaultFile:"index.html"
+      // proxy: {
+      //   enable: true,
+      //   host: 'http://w3cboy.com',
+      //   urls: /^\/api\//
+      // },
+      // defaultFile:"index.html"
      }));
 });
 

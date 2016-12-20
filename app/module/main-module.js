@@ -5,4 +5,4 @@ angular
     .module('main',[
             'ui.router',
             'config'
-        ]);
+        ]);   

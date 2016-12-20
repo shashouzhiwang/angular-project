@@ -6,6 +6,7 @@ server
 http封装
 ui-router
 图标字体
+dialog
 sass使用
 gulp(代码检测，js/css合并压缩加随机码，HTML/img压缩,文件拷贝，文件监听，浏览器热检测，)
 
@@ -17,3 +18,6 @@ webpack
 单元测试
 常用组件
    
+
+编辑规范
+  文件名以中划线拼接
