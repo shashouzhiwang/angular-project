@@ -13,8 +13,8 @@ angular
             });
      
         $scope.z = 0;
-      $scope.sum = function() {
-        $scope.z = $scope.x + $scope.y;
+      $scope.sum = function() {   
+        $scope.z = $scope.x + $scope.y;   
       };
     }   
 //    angular.module('main').controller('contentController',[
